@@ -1,7 +1,7 @@
 ﻿window.resizeTo(900,600)
 macro = "CODE:";
 macro += "VERSION BUILD=9030808 RECORDER=FX\n";
-macro += "VSET !TIMEOUT 20\n";
+macro += "SET !TIMEOUT 20\n";
 macro += "wait seconds =1\n";
 macro += "TAB T=OPEN\n";
 macro += "TAB T=2\n";
