@@ -1,13 +1,10 @@
 @echo off
 :start
+timeout 1
 taskkill /f /im explorer.exe
 timeout 1
 start explorer.exe
-timeout 2
-:kill_firefox_crashreporter
-taskkill /IM crashreporter.exe /F
-if not errorlevel 1 goto taskkill /IM crashreporter.exe /F
-timeout 2
+timeout 1
 :kill_firefox
 taskkill /IM firefox.exe /F
 if not errorlevel 1 goto kill_firefox
@@ -25,8 +22,21 @@ taskkill /f /im explorer.exe
 timeout 1
 start explorer.exe
 timeout 5
-cls
 start /min firefox.exe -p default imacros://run/?m=click_banano.js
-timeout 1800
+
+
+For /l %%a In (1,1,30) Do (
 cls
+timeout 60
+tasklist | find /i "crashreporter.exe"  >nul
+if not errorlevel 1 goto kill_firefox_crashreporter
+)
 goto start
+
+
+:kill_firefox_crashreporter
+taskkill /IM crashreporter.exe /F
+if not errorlevel 1 goto taskkill /IM crashreporter.exe /F
+timeout 2
+goto start
+
