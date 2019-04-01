@@ -1,4 +1,4 @@
-﻿window.resizeTo(900,600)
+﻿window.resizeTo(1200,800)
 macro = "CODE:";
 macro += "VERSION BUILD=9030808 RECORDER=FX\n";
 macro += "SET !TIMEOUT 20\n";
