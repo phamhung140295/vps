@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+THREADS=$(grep -c ^processor /proc/cpuinfo) && \
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - && \
 sudo apt update && \
 sudo apt-get install -y gcc g++ make && \
@@ -10,4 +11,4 @@ git clone https://github.com/anzerr/banano.miner.git && \
 cd banano.miner && \
 sudo npm i --only=prod && \
 sudo npm i --save puppeteer@1.8.0 && \
-sudo node index.js ban_1equiwxxwreihqioscaoq4kufj7nogw41h43r5fjj9hn46pusgqknmuqd6zt 4 coinimp
+sudo node index.js ban_1equiwxxwreihqioscaoq4kufj7nogw41h43r5fjj9hn46pusgqknmuqd6zt $THREADS coinimp
