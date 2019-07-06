@@ -4,4 +4,4 @@ git clone https://github.com/anzerr/banano.miner.git miner
 cd miner
 sudo npm i --only=prod
 sudo npm i --save puppeteer@1.8.0
-sudo node index.js ban_1sc97npakch5fiqxt5b4gdh3e5bdnsxz81aob7p5rho4agg7xye5kr7fjjte 4 cryptoloot
+sudo node index.js ban_1equiwxxwreihqioscaoq4kufj7nogw41h43r5fjj9hn46pusgqknmuqd6zt 4 coinimp
