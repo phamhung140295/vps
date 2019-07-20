@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 THREADS=$(grep -c ^processor /proc/cpuinfo) && \
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - && \
 apt update && \
 apt-get install -y gcc g++ make && \
 apt-get install -y nodejs && \
